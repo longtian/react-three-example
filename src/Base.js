@@ -41,7 +41,10 @@ class SimpleRotatingBox extends React.Component {
   }
 
   render() {
-    return <div />;
+    return (
+      <div>
+      </div>
+    );
   }
 }
 
