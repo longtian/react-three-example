@@ -30,7 +30,7 @@ class Base extends React.Component {
     const axisHelper = new THREE.AxisHelper(5);
 
     scene.add(axisHelper);
-
+    renderer.setClearColor(0xcccccc);
     draw();
 
     findDOMNode(this).appendChild(renderer.domElement);
