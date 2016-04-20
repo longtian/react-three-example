@@ -1,0 +1,9 @@
+.base {
+    float: left;
+    margin: 4px;
+}
+
+body, div {
+    padding: 0;
+    margin: 0;
+}
