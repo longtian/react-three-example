@@ -2,7 +2,7 @@ import React from 'react';
 import THREE from 'three';
 import { findDOMNode } from 'react-dom';
 
-class SimpleRotatingBox extends React.Component {
+class Base extends React.Component {
 
   componentDidMount() {
     // where you place objects , lights and cameras
@@ -48,6 +48,6 @@ class SimpleRotatingBox extends React.Component {
   }
 }
 
-SimpleRotatingBox.displayName = 'SimpleRotatingBox';
+Base.displayName = 'Base';
 
-export default SimpleRotatingBox;
+export default Base;
