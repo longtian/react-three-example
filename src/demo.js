@@ -1,5 +1,5 @@
 import THREE from 'three';
-import 'style!css!./main.css'
+import 'style!css!./main.css';
 const renderer = new THREE.WebGLRenderer();
 import 'imports?THREE=three!three/examples/js/controls/DeviceOrientationControls';
 // import 'imports?THREE=three!three/examples/js/controls/OrbitControls';
@@ -38,6 +38,23 @@ scene.add(
 const controls = new THREE.DeviceOrientationControls(camera);
 // const controls2 = new THREE.OrbitControls(camera);
 
+const cube = new THREE.Mesh(
+  new THREE.BoxGeometry(50, 50, 50),
+  new THREE.MeshBasicMaterial({
+    color: 0xcccccc
+  })
+);
+
+
+cube.position.z = -350;
+cube.position.y = -250;
+
+scene.add(new THREE.AxisHelper(100));
+
+scene.add(cube);
+
+scene.add(new THREE.PointLight(0xffffff));
+
 const tick = () => {
   window.requestAnimationFrame(tick);
   // if ('ondeviceorientation' in window) {
@@ -50,28 +67,4 @@ const tick = () => {
   cube.rotateY(0.5);
 };
 
-
-scene.add(new THREE.AxisHelper(100));
-
-
-const cube = new THREE.Mesh(
-  new THREE.BoxGeometry(50, 50, 50),
-  new THREE.MeshBasicMaterial({
-    color: 0xcccccc
-  })
-);
-
-
-cube.position.z = -350;
-cube.position.y = -250;
-
-scene.add(cube);
-
-
-scene.add(new THREE.PointLight(0xffffff))
-
-
 tick();
-
-
-
