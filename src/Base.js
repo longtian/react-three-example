@@ -15,6 +15,7 @@ class Base extends React.Component {
       antialias: true
     });
 
+    renderer.setClearColor(0xEEEEEE);
     renderer.setSize(300, 300);
 
     camera.position.x = 2;
